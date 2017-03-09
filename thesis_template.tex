@@ -1,10 +1,136 @@
 % ---- ETD Document Class and Useful Packages ---- %
 \documentclass{ucetd}
+
 \usepackage{subfigure,epsfig,amsfonts}
 \usepackage{natbib}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
+\usepackage{import}
+\usepackage{amsmath}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{epsf}
+\usepackage{subfigure}
+\usepackage{color}
+\usepackage{threeparttable}
+\usepackage{comment}
+\usepackage{epsfig}
+\usepackage{xspace}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage[usenames,dvipsnames,svgnames]{xcolor}
+\usepackage{latexsym}
+
+\DeclareGraphicsExtensions{.jpg,.pdf,.pdf,.eps,.ps}
+
+\DeclareSymbolFont{extraup}{U}{zavm}{m}{n}
+\DeclareMathSymbol{\varheart}{\mathalpha}{extraup}{86}
+\DeclareMathSymbol{\vardiamond}{\mathalpha}{extraup}{87}
+
+
+\def\jcap{J. of Cosm. \& Astropart. Phys.}
+
+% Results
+\newcommand{\AlensNom}{\ensuremath{1.06 \pm 0.29}}  % Alens for nominal spectrum
+\newcommand{\AlensDel}{\ensuremath{0.76 \pm 0.28}}  % Alens for delensed spectrum
+\newcommand{\effData}{\ensuremath{28}}              % delensing efficiency for the data, in %
+\newcommand{\effDataErr}{\ensuremath{0.28 \pm YY}}  % delensing efficiency for the data, with erroros
+\newcommand{\delSignificance}{\ensuremath{6.9}}     % significance of delensing detection
+\newcommand{\effSim}{\ensuremath{20}}
+%Model parameters
+
+\newcommand{\omb}{\ensuremath{\Omega_{b}h^2}\xspace}
+\newcommand{\omc}{\ensuremath{\Omega_{c}h^2}\xspace}
+\newcommand{\neff}{\ensuremath{N_\mathrm{eff}}\xspace}
+\newcommand{\yhe}{\ensuremath{Y_\mathrm{p}}\xspace}
+\newcommand{\As}{\ensuremath{A_\mathrm{s}}\xspace}
+\newcommand{\nrun}{\ensuremath{dn_s/d\ln k}\xspace}
+%\newcommand{\Alens}{\ensuremath{A_\mathrm{L}}\xspace}
+\newcommand{\ns}{\ensuremath{n_\mathrm{s}}\xspace}
+\newcommand{\thetas}{\ensuremath{\theta_\mathrm{s}}\xspace}
+\newcommand{\thetaMC}{\ensuremath{\theta_\mathrm{MC}}\xspace}
+\newcommand{\ho}{\ensuremath{H_{0}}\xspace}
+\newcommand{\sigmaeight}{\ensuremath{\sigma_{8}}\xspace}
+\newcommand{\sumnu}{\ensuremath{\Sigma m_\nu}\xspace}
+\newcommand{\LCDM}{\mbox{$\Lambda$CDM}\xspace}
+\newcommand{\LCDMAlens}{\mbox{$\Lambda$CDM+$A_\mathrm{L}$}\xspace}
+\newcommand{\LCDMyhe}{\mbox{$\Lambda$CDM+\yhe}\xspace}
+\newcommand{\LCDMneff}{\mbox{$\Lambda$CDM+\neff}\xspace}
+\newcommand{\LCDMyheneff}{\mbox{$\Lambda$CDM+$Y_{\mathrm{p}}$+\neff}\xspace}
+\newcommand{\TtoB}{$T \rightarrow B$}
+\newcommand{\EtoB}{$E \rightarrow B$}
+\newcommand{\Dps}{\ensuremath{D_{3000}^{\mathrm{PS_{EE}}}}\xspace}
+\def\beq{\begin{equation}}
+\def\eeq{\end{equation}}
+\def\beqn{\begin{eqnarray}}
+\def\eeqn{\end{eqnarray}}
+%\def\bl{\mathbf{l}}
+\def\bl{\pmb{\ell}}
+\def\bL{\mathbf{L}}
+\def\mbell{\pmb{\ell}} % math-bold ell
+\def\ublu{\bl'}
+\newcommand{\nhat}{\ensuremath{\mathbf{\hat{n}}}}
+
+ %Dataset commands
+\newcommand{\planck}{\textit{Planck}\xspace}
+\newcommand{\sptpol}{SPTpol\xspace}
+
+\newcommand{\sptpolEETE}{\textsc{SPTpol}\xspace}
+\newcommand{\planckTT}{\textsc{PlanckTT}\xspace}
+\newcommand{\cmb}{\textsc{PlanckTT+SPTpol}\xspace}
+\newcommand \full {\textsc{ra0hdec-57.5}}
+
+%Unit commands
+\newcommand{\sigT}{\mbox{$\sigma_{\mbox{\tiny T}}$}}
+\newcommand{\Tcmb}{\mbox{$T_{\mbox{\tiny CMB}}$}\xspace}
+\newcommand{\kB}{\mbox{$k_{\mbox{\tiny B}}$}}
+\def\microKsq{\mu{\mbox{K}}^2}
+\def\microK{\mu{\mbox{K}}}
+\newcommand{\muksq}{\ensuremath{\mu{\rm K}^2}\xspace}
+\newcommand{\sqdeg}{\ensuremath{\mathrm{deg}^2}\xspace}
+\newcommand{\mukarcmin}{\ensuremath{\mu{\rm K-arcmin}}\xspace}
+
+%Variables
+\def\cl{$C_{\ell}$\xspace}
+\def\dl{$D_{\ell}$}
+\def\mb{\mathbf}
+\def\bhat{\ensuremath{\hat{B}^{\mathrm{lens}}}}
+\newcommand\braw{B^{\rm meas}}
+\newcommand\raw{raw}
+\newcommand{\lb}{\ensuremath{\mathbf{l}}}
+\newcommand{\Alens}{\ensuremath{A_{\rm lens}}\xspace}
+\newcommand{\Ares}{\ensuremath{A^{\rm res}_{\rm lens}}\xspace}
+\newcommand{\Dclbb}{\ensuremath{\Delta C_{\ell}^{BB}}\xspace}
+
+% Misc commands
+\newcommand\tbd[1]{\textcolor{Red}{#1}}
+\newcommand\kwtext[1]{\textcolor{BlueViolet}{#1}}
+\newcommand\scott[1]{\textcolor{Blue}{\ SD: #1}}
+\newcommand{\sze}{Sunyaev-Ze\v{l}dovich Effect}
+\newcommand{\eg}{\textit{e.g.}}
+\newcommand{\ie}{\textit{i.e.}}
+\newcommand{\simleq}{{\raise.0ex\hbox{$\mathchar"013C$}\mkern-14mu \lower1.2ex\hbox{$\mathchar"0218$}}}
+\newcommand{\simgeq}{{\raise.0ex\hbox{$\mathchar"013E$}\mkern-14mu \lower1.2ex\hbox{$\mathchar"0218$}}}
+
+% Editor colors.  Pick your color from this list:
+% https://en.wikibooks.org/wiki/LaTeX/Colors
+\definecolor{orange}{HTML}{BF482F}
+
+\hyphenation{POLARBEAR}
+
+\newcommand{\refsec}[1]{Section~\ref{sec:#1}}
+\newcommand{\refeq}[1]{Eq.~(\ref{eqn:#1})}
+\newcommand{\refssec}[1]{Section~\ref{subsec:#1}}
+\newcommand{\reffig}[1]{Figure~\ref{fig:#1}}
+\newcommand{\refFig}[1]{Figure~\ref{fig:#1}}
+\newcommand{\reftab}[1]{Table~\ref{tab:#1}}
+\newcommand{\refTab}[1]{Table\ref{tab:#1}}
+
+
+
+
+
 
 %% Use these commands to set biographic information for the title page:
 \title{Thesis Title}
@@ -48,17 +174,17 @@
 \chapter{Introduction}
 % Introductory stuff
 
-\chapter{A Chapter}
-\section{Introduction}
+\chapter{Delensing }
+\include{./delens100d}
+% \section{Introduction}
 % Intro to chapter one
 
 % Format a LaTeX bibliography
 \makebibliography
-
+% \bibliography{../../BIBTEX/spt,./delens100d}
 % Figures and tables, if you decide to leave them to the end
 %\input{figure}
 %\input{table}
-
 \end{document}
 
 

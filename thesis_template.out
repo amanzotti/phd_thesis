@@ -1,0 +1,30 @@
+\BOOKMARK [0][-]{chapter*.2}{List of Figures}{}% 1
+\BOOKMARK [0][-]{chapter*.3}{List of Tables}{}% 2
+\BOOKMARK [0][-]{chapter*.5}{Acknowledgments}{}% 3
+\BOOKMARK [0][-]{chapter*.6}{Abstract}{}% 4
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 5
+\BOOKMARK [0][-]{chapter.2}{Delensing }{}% 6
+\BOOKMARK [1][-]{section.2.1}{Introduction}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.2}{Lensing B modes and Our Approach to Delensing}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.3}{Data}{chapter.2}% 9
+\BOOKMARK [2][-]{subsection.2.3.1}{CMB Data: The SPTpol Instrument and Observations}{section.2.3}% 10
+\BOOKMARK [2][-]{subsection.2.3.2}{Herschel cosmic infrared background}{section.2.3}% 11
+\BOOKMARK [1][-]{section.2.4}{Data Processing}{chapter.2}% 12
+\BOOKMARK [2][-]{subsection.2.4.1}{Bolometer data to Maps}{section.2.4}% 13
+\BOOKMARK [2][-]{subsection.2.4.2}{B-mode map pipeline}{section.2.4}% 14
+\BOOKMARK [2][-]{subsection.2.4.3}{B-template map pipeline}{section.2.4}% 15
+\BOOKMARK [2][-]{subsection.2.4.4}{Power Spectrum Analysis}{section.2.4}% 16
+\BOOKMARK [1][-]{section.2.5}{Simulations}{chapter.2}% 17
+\BOOKMARK [2][-]{subsection.2.5.1}{Pipeline}{section.2.5}% 18
+\BOOKMARK [2][-]{subsection.2.5.2}{Simulated B-mode templates}{section.2.5}% 19
+\BOOKMARK [1][-]{section.2.6}{Results}{chapter.2}% 20
+\BOOKMARK [2][-]{subsection.2.6.1}{Expectation from Simulations}{section.2.6}% 21
+\BOOKMARK [2][-]{subsection.2.6.2}{Data}{section.2.6}% 22
+\BOOKMARK [1][-]{section.2.7}{Systematics, Data Consistency, and Significance Tests}{chapter.2}% 23
+\BOOKMARK [2][-]{subsection.2.7.1}{Systematics Tests}{section.2.7}% 24
+\BOOKMARK [2][-]{subsection.2.7.2}{Null / Consistency Tests}{section.2.7}% 25
+\BOOKMARK [1][-]{section.2.8}{Understanding Delensing Efficiency}{chapter.2}% 26
+\BOOKMARK [2][-]{subsection.2.8.1}{Delensing Efficiency from Simulations}{section.2.8}% 27
+\BOOKMARK [2][-]{subsection.2.8.2}{Connecting to Analytic Expectations}{section.2.8}% 28
+\BOOKMARK [2][-]{subsection.2.8.3}{Understanding Efficiency from Simulations}{section.2.8}% 29
+\BOOKMARK [1][-]{section.2.9}{Conclusion}{chapter.2}% 30
